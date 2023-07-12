@@ -6,7 +6,7 @@ export function LikeButton({ id }) {
 
   return( 
     <button onClick={() => setLike(!like)}>
-      { like ? '❤' : '♡'}
+      { like ? '♥️' : '♡'}
     </button>
   )
 }
