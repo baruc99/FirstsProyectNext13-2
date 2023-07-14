@@ -6,10 +6,10 @@ const Links = [{
     route: '/'
 }, {
     label: 'About',
-    route: 'about'
+    route: '/about'
 },{
     label: 'Post',
-    route: 'post'
+    route: '/post'
 }
 ]
 

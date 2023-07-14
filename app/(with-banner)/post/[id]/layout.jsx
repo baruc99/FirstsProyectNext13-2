@@ -15,7 +15,7 @@ export default  async function PostLayout  ({ children, params }){
 
   return (
     <article>
-      <h1>{post.title}</h1>
+      <h3>{post.title}</h3>
       <p>{post.body}</p>
       <Link href={`/post/${id}/comments`}>Ver comentarios</Link>
       {children}

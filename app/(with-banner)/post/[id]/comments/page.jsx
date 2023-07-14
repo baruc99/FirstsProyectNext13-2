@@ -1,7 +1,10 @@
 import Link from "next/link";
+import Error from "./error";
+import Image from "next/image";
 
 const fetchComents = async (id) => {
-    await new Promise( resolve => setTimeout(resolve, 3000) )
+    await new Promise( resolve => setTimeout(resolve, 1000) )
+    //throw new Error('Error al cargar los comentarios')
 
     return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
         next: {
@@ -21,6 +24,7 @@ export default async function post({ params }) {
         {comments.map(comment => {
             return (
                 <li key={comment.id}>
+                    <Image height={'50'} width={'50'} src={`https://i.pravatar.cc/150?img=${comment.id}`} alt={comment.name} />
                     <h4>{comment.name}</h4>
                     <small>{comment.body}</small>
                 </li>
